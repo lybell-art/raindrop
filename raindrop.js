@@ -3,7 +3,7 @@ var n=0, Max=5000, freq=5;
 var R=[];
 var bg,shaping;
 var isUp=false, isDown=false;
-()function setup()
+function setup()
 {
   createCanvas(windowWidth,windowHeight);
 //  fullScreen();

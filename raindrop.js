@@ -18,7 +18,7 @@ function draw()
   rainFall();
   rainDestroy();
   fraqControl();
-  console.log(n);
+  console.log(frameRate);
 }
 function keyPressed()
 {

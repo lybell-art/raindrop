@@ -3,6 +3,12 @@ var n=0, Max=5000, freq=5;
 var R=[];
 var bg,shaping;
 var isUp=false, isDown=false;
+var bgm;
+function preload()
+{
+  soundFormats('mp3','ogg');
+  bgm=loadSound('Pouring-rain.mp3');
+}
 function setup()
 {
   createCanvas(windowWidth,windowHeight);
@@ -10,6 +16,7 @@ function setup()
   rainSet();
   bgSet();
   for(var i=0;i<Max;i++) R.push(new rain());
+  bgm.loop();
 }
 function draw()
 {
@@ -19,6 +26,7 @@ function draw()
   rainDestroy();
   fraqControl();
   console.log(frameRate());
+  bgm.setVolume(map(freq,1,100,0.1,1.0));
 }
 function keyPressed()
 {
